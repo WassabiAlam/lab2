@@ -1,1 +1,194 @@
 
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* Header */
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
+
+/* Navigation */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main Content */
+main {
+    width: 100%;
+}
+
+
+/* Bio / Hero Section */
+.bio-hero {
+    flex-basis: 100%;
+    background-color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+
+.bio-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.bio-hero h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+
+.bio-hero p {
+    margin-bottom: 10px;
+}
+
+
+/* Project Card Grid */
+.card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+
+/* Individual Cards */
+.card {
+    flex-basis: 100%;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+
+.card p {
+    margin-bottom: 20px;
+}
+
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+.card a:hover {
+    background-color: #555;
+}
+
+
+/* Card Hover Interaction */
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+
+    /* Header becomes a horizontal row */
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    /* Navigation links become horizontal */
+    nav {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+
+    /* Cards become a horizontal row */
+    .card-grid {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    /* Each card takes approximately 30% of the row */
+    .card {
+        flex-basis: 30%;
+    }
+
+
+    /* Larger hero section */
+    .bio-hero {
+        padding: 70px 20px;
+    }
+
+}
